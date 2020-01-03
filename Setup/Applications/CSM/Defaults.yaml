@@ -1,8 +1,6 @@
 harnessApiVersion: '1.0'
 type: APPLICATION_DEFAULTS
 defaults:
-- name: APP_ORG
-  value: App_org
 - name: BACKUP_PATH
   value: $HOME/${app.name}/${service.name}/${env.name}/backup/${timestampId}
 - name: RUNTIME_PATH

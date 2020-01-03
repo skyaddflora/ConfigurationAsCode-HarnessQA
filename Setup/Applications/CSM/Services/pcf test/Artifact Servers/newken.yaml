@@ -1,8 +1,0 @@
-  
-harnessApiVersion: '1.0'
-type: ARTIFACTORY
-artifactPattern: backend*.tgz
-metadataOnly: true
-repositoryName: KenTest
-repositoryType: any
-serverName: Harness SAAS Artifactory
