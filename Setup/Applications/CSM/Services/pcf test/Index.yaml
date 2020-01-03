@@ -1,0 +1,17 @@
+harnessApiVersion: '1.0'
+type: SERVICE
+artifactType: PCF
+configVariables:
+- name: min
+  value: '1'
+  valueType: TEXT
+- name: pcf3
+  value: defaultvalue_pcf3
+  valueType: TEXT
+- name: pcf2
+  value: defaultvalue_pcf2
+  valueType: TEXT
+- name: pcf1
+  value: defaultvalue_pcf1
+  valueType: TEXT
+deploymentType: PCF
