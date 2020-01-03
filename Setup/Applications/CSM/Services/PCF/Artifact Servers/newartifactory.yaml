@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: ARTIFACTORY
+artifactPattern: backend*.tgz
+metadataOnly: false
+repositoryName: FloraRepo-generic
+repositoryType: any
+serverName: asdadasdasdad
