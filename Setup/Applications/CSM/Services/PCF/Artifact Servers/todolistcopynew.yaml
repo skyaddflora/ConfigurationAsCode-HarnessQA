@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: NEXUS
+artifactPaths:
+- todolist-copy-new
+extension: war
+groupId: newreleases
+metadataOnly: false
+repositoryFormat: maven
+repositoryName: releases
+serverName: nexus2_harness_io_admin
