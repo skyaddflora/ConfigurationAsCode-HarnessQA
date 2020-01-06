@@ -49,13 +49,14 @@ phases:
       properties:
         commandPath: null
         connectionAttributes: null
+        connectionType: SSH
         executeOnDelegate: true
         host: null
         outputVars: ''
         publishAsVar: false
         scriptString: |-
           echo "pcf.finalRoute[0 ]= ${pcf.finalRoutes[0]}"
-          echo "pcf.finalRoute[1] = ${pcf.finalRoute[1]}"
+          echo "pcf.finalRoute[1] = ${pcf.finalRoutes[1]}"
         scriptType: BASH
         sshKeyRef: null
         sweepingOutputName: null
