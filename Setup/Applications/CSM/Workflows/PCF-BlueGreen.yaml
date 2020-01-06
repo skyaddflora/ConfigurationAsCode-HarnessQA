@@ -44,6 +44,25 @@ phases:
         timeoutIntervalInMinutes: 5
         useAppAutoscalar: false
         useCurrentRunningCount: false
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: |-
+          echo ${pcf.finalRoutes[0]}
+          echo ${pcf.finalRoute[1]}
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: PCF_RESIZE
     name: Deploy
