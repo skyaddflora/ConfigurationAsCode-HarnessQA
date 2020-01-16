@@ -58,6 +58,8 @@ phases:
           echo "pcf.finalRoute[0 ]= ${pcf.finalRoutes[0]}"
           echo "pcf.finalRoute[1] = ${pcf.finalRoutes[1]}"
           echo "pcf.finalRoute[1] = ${pcf.finalRoutes[2]}"
+          echo ${pcf.oldAppName}
+          echo ${pcf.newAppName}
         scriptType: BASH
         sshKeyRef: null
         sweepingOutputName: null
