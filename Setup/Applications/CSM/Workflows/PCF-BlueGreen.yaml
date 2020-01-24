@@ -55,11 +55,23 @@ phases:
         outputVars: ''
         publishAsVar: false
         scriptString: |-
-          echo "pcf.finalRoute[0 ]= ${pcf.finalRoutes[0]}"
-          echo "pcf.finalRoute[1] = ${pcf.finalRoutes[1]}"
-          echo "pcf.finalRoute[1] = ${pcf.finalRoutes[2]}"
-          echo ${pcf.oldAppName}
-          echo ${pcf.newAppName}
+          echo ${pcf.newAppRoutes[0]}
+
+          echo New App Name: ${pcf.newAppName}
+          echo New App Guild:  ${pcf.newAppGuid}
+          echo New App Routes:  ${pcf.newAppRoutes}
+
+          echo "\n\n"
+          echo Old App Name: ${pcf.oldAppName}
+          echo Old App Guild:  ${pcf.oldAppGuid}
+          echo Old App Routes:  ${pcf.oldAppRoutes}
+
+          echo activeRoute: ${pcf.finalRoutes}
+          echo inActiveRoute: ${pcf.tempRoutes}
+
+          echo ${infra.pcf.cloudProvider.name}
+          echo ${infra.pcf.organization}
+          echo ${infra.pcf.space}
         scriptType: BASH
         sshKeyRef: null
         sweepingOutputName: null
