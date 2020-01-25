@@ -42,7 +42,7 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutIntervalInMinutes: 5
-        useAppAutoscalar: true
+        useAppAutoscalar: false
         useCurrentRunningCount: false
     - type: SHELL_SCRIPT
       name: Shell Script
