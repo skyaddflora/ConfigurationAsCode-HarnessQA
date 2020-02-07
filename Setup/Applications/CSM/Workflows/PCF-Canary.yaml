@@ -16,4 +16,66 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - OGP2bnvASa-D8oua0YdmhQ
+phases:
+- type: PCF
+  computeProviderName: pcf-flora
+  daemonSet: false
+  infraDefinitionName: PCF-new
+  name: Phase 1
+  phaseSteps:
+  - type: PCF_SETUP
+    name: Setup
+    steps:
+    - type: PCF_SETUP
+      name: App Setup
+      properties:
+        blueGreen: false
+        isWorkflowV2: true
+        resizeStrategy: DOWNSIZE_OLD_FIRST
+    stepsInParallel: false
+  - type: PCF_RESIZE
+    name: Deploy
+    steps:
+    - type: PCF_RESIZE
+      name: App Resize
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: PCF
+  statefulSet: false
+preDeploymentSteps:
+- type: ARTIFACT_CHECK
+  name: Artifact Check
+rollbackPhases:
+- type: PCF
+  computeProviderName: pcf-flora
+  daemonSet: false
+  infraDefinitionName: PCF-new
+  name: Rollback Phase 1
+  phaseNameForRollback: Phase 1
+  phaseSteps:
+  - type: PCF_RESIZE
+    name: Deploy
+    phaseStepNameForRollback: Deploy
+    statusForRollback: SUCCESS
+    steps:
+    - type: PCF_ROLLBACK
+      name: App Rollback
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: PCF
+  statefulSet: false
 templatized: false
