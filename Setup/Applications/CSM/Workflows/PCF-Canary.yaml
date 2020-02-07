@@ -50,7 +50,7 @@ phases:
       properties:
         downsizeInstanceCount: '1'
         downsizeInstanceUnitType: COUNT
-        instanceCount: 100
+        instanceCount: '30'
         instanceUnitType: PERCENTAGE
         templateUuid: null
         templateVariables: null
