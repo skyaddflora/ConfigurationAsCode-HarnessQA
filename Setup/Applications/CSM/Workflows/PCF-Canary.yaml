@@ -32,7 +32,7 @@ phases:
         blueGreen: false
         finalRouteMap: null
         isWorkflowV2: true
-        olderActiveVersionCountToKeep: '3'
+        olderActiveVersionCountToKeep: '1'
         processAutoscalarPluginConfig: false
         resizeStrategy: DOWNSIZE_OLD_FIRST
         templateUuid: null
