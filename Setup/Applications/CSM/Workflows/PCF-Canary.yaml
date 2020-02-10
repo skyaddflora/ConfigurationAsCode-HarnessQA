@@ -87,6 +87,22 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
+    steps:
+    - type: HTTP
+      name: HTTP
+      properties:
+        assertion: ${assertionStatus}==200
+        body: ''
+        executeWithPreviousSteps: false
+        header: ''
+        method: GET
+        publishAsVar: false
+        responseProcessingExpressions: ''
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        templateVariables: ''
+        timeoutMillis: 10000
+        url: https://google.com/error
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
