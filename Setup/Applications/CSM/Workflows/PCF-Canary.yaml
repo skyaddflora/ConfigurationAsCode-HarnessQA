@@ -77,7 +77,7 @@ phases:
     - type: PCF_RESIZE
       name: App Resize
       properties:
-        downsizeInstanceCount: '1'
+        downsizeInstanceCount: '0'
         downsizeInstanceUnitType: COUNT
         instanceCount: 100
         instanceUnitType: PERCENTAGE
