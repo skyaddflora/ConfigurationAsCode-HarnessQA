@@ -5,3 +5,4 @@ metadataOnly: true
 repositoryName: KenTest
 repositoryType: any
 serverName: Harness SAAS Artifactory
+useDockerFormat: false

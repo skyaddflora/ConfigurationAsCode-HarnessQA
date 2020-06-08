@@ -5,3 +5,4 @@ metadataOnly: false
 repositoryName: FloraRepo-generic
 repositoryType: any
 serverName: asdadasdasdad
+useDockerFormat: false

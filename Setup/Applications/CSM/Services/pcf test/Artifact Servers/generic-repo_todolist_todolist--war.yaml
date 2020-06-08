@@ -5,3 +5,4 @@ metadataOnly: false
 repositoryName: generic-repo
 repositoryType: any
 serverName: asdadasdasdad
+useDockerFormat: false
